@@ -26,14 +26,14 @@ export async function generateQRCode(
       errorCorrectionLevel: finalOptions.errorCorrectionLevel,
     }
 
-    let dataUrl = await QRCode.toDataURL(data, qrOptions)
+    let dataUrl = (await QRCode.toDataURL(data, qrOptions)) as unknown as string
 
     // Add logo if provided
     if (finalOptions.logo) {
       dataUrl = await addLogoToQR(dataUrl, finalOptions.logo, {
         logoSize: finalOptions.logoSize || 60,
         logoMargin: finalOptions.logoMargin || 2,
-      })
+      }) as string
     }
 
     return dataUrl
@@ -205,7 +205,7 @@ export async function generateQRCodeAsSVG(
       errorCorrectionLevel: finalOptions.errorCorrectionLevel,
     }
 
-    const svg = await QRCode.toString(data, { ...qrOptions, type: 'svg' })
+    const svg = (await QRCode.toString(data, { ...qrOptions, type: 'svg' })) as unknown as string
     return `data:image/svg+xml;base64,${btoa(svg)}`
   } catch (error) {
     throw new Error('Failed to generate QR code as SVG')

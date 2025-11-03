@@ -2,11 +2,14 @@
   "name": "qr-code-generator",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://TMNPThennakoon.github.io/QR-Barcode-Generator",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "framer-motion": "^10.16.16",
@@ -28,6 +31,7 @@
     "autoprefixer": "^10.4.16",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.3.3"

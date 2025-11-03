@@ -3,9 +3,11 @@
 import { useState } from 'react'
 import { Wifi, User, Mail, MessageSquare, MapPin, Calendar, Link, Sparkles } from 'lucide-react'
 
+type QRSubType = 'url' | 'wifi' | 'vcard' | 'email' | 'sms' | 'geolocation' | 'event' | 'text'
+
 interface QRTypeFormProps {
-  qrSubType: string
-  setQrSubType: (type: string) => void
+  qrSubType: QRSubType | string
+  setQrSubType: (type: QRSubType | string) => void
   qrTypeData: any
   setQrTypeData: (data: any) => void
   url: string

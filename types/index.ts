@@ -74,6 +74,6 @@ export interface GeneratedCode {
   data: string
   image: string
   timestamp: number
-  options?: QRCodeOptions | BarcodeOptions
+  options?: Partial<QRCodeOptions> | Partial<BarcodeOptions>
 }
 

@@ -48,7 +48,7 @@ export default function QRScanner({ darkMode, onClose }: QRScannerProps) {
     }
   }
 
-  const stopScanning = async (scannerInstance?: Html5Qrcode) => {
+  const stopScanning = async (scannerInstance?: any) => {
     const instance = scannerInstance || scanner
     if (instance) {
       try {

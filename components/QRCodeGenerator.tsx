@@ -703,7 +703,7 @@ export default function QRCodeGenerator() {
               {codeType === 'qr' && (
                 <QRTypeForm
                   qrSubType={qrSubType}
-                  setQrSubType={setQrSubType}
+                  setQrSubType={(type) => setQrSubType(type as QRSubType)}
                   qrTypeData={qrTypeData}
                   setQrTypeData={setQrTypeData}
                   url={url}
