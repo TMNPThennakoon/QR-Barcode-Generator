@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'QR & Barcode Generator',
   description: 'Generate QR codes and barcodes instantly - Download as PNG or PDF',
   icons: {
-    icon: '/icon.svg',
+    icon: '/QR-Barcode-Generator/icon.svg',
   },
 }
 
